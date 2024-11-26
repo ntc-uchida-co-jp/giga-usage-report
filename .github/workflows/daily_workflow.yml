@@ -255,10 +255,7 @@ jobs:
             # レポート名と出力ファイルパスのペアを配列にまとめる
             $reports = @(
               @{ Name = "M365AppUserDetail"; Cmd = "Get-MgReportM365AppUserDetail" },
-              @{ Name = "Office365ActiveUserDetail"; Cmd = "Get-MgReportOffice365ActiveUserDetail" },
-              @{ Name = "OneDriveActivityUserDetail"; Cmd = "Get-MgReportOneDriveActivityUserDetail" },
-              @{ Name = "SharePointActivityUserDetail"; Cmd = "Get-MgReportSharePointActivityUserDetail" },
-              @{ Name = "TeamUserActivityUserDetail"; Cmd = "Get-MgReportTeamUserActivityUserDetail" }
+              @{ Name = "Office365ActiveUserDetail"; Cmd = "Get-MgReportOffice365ActiveUserDetail" }
             )
         
             # リトライ機能を使って各レポートを実行
@@ -296,10 +293,7 @@ jobs:
             # フォルダ名とそれに対応するファイルパス
             $foldersAndFiles = @(
               @{ name = "M365AppUserDetail"; file = "${dateStr}_result_Get-MgReportM365AppUserDetail.csv" },
-              @{ name = "Office365ActiveUserDetail"; file = "${dateStr}_result_Get-MgReportOffice365ActiveUserDetail.csv" },
-              @{ name = "OneDriveActivityUserDetail"; file = "${dateStr}_result_Get-MgReportOneDriveActivityUserDetail.csv" },
-              @{ name = "SharePointActivityUserDetail"; file = "${dateStr}_result_Get-MgReportSharePointActivityUserDetail.csv" },
-              @{ name = "TeamUserActivityUserDetail"; file = "${dateStr}_result_Get-MgReportTeamUserActivityUserDetail.csv" }
+              @{ name = "Office365ActiveUserDetail"; file = "${dateStr}_result_Get-MgReportOffice365ActiveUserDetail.csv" }
             )
             
             # フォルダを作成する関数
